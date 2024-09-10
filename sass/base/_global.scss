@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// make footer go to the bottom of the page
+main {
+  flex: 1;
+  display: flex;
+  padding-top: 1rem;
+}
+
+  // h2 title anchor tag
+  .entry-title a {
+    text-decoration: none;
+    color: inherit;
+  }

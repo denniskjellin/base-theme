@@ -1,0 +1,21 @@
+/*
+Theme Name: WP base theme
+Author: Dennis Kjellin
+Description: Bootstrap 5 WordPress Theme
+Version: 1.0
+Text Domain: text-domain
+Tags: Bootstrap 5, Bootstrap Icons
+*/
+
+// Import Bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import 'abstracts/abstracts';
+@import 'base/base';
+@import 'layout/layout';
+@import 'components/components';
+@import 'pages/pages';

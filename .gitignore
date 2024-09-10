@@ -1,0 +1,47 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore user-specific files
+wp-config.php
+
+# Ignore build and development files
+/dist/
+/node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+Gruntfile.js
+webpack.config.js
+/acf-json/
+
+# Ignore IDE-specific files
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore compiled PHP files (if applicable)
+*.phpc
+
+# Ignore backup files
+*.bak
+
+# Ignore Composer files (if using Composer)
+/vendor/
+
+# Ignore image and media uploads (optional)
+/wp-content/uploads/
+
+# Ignore cache and temporary files (optional)
+/wp-content/cache/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# Ignore additional development or customization files (adjust as needed)
+/dev/
+
+# Ignore any other files or directories you want to exclude
+index.html
+
+.env
