@@ -5,4 +5,4 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <?php get_template_part( 'components/main-navbar' ); ?>
+  <?php get_template_part( 'template-parts/components/main-navbar' ); ?>
