@@ -7,31 +7,31 @@
 
 get_header(); ?>
 
-<main id="main" class="container main-container" role="main"> 
-    <section class="content">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <?php if (have_posts()) : ?>
-                        <header class="page-header">
-                            <h1 class="page-title"><?php printf(esc_html__('Search Results for: %s'), '<span>' . get_search_query() . '</span>'); ?></h1>
-                        </header>
+<main id="main" class="main-container" role="main"> 
+    <div class="container">
+        <div class="row">
+            <section class="col-12 col-md-8">
+                <?php if (have_posts()) : ?>
+                    <h1 class="page-title">
+                        <?php printf(esc_html__('Search Results for: %s', 'textdomain'), '<span>' . esc_html(get_search_query()) . '</span>'); ?>
+                    </h1>
+                    
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php get_template_part('template-parts/content/search/content', 'search'); ?>
+                    <?php endwhile; ?>
 
-                        <?php while (have_posts()) : the_post(); ?>
-                            <?php get_template_part('template-parts/content', 'search'); ?>
-                        <?php endwhile; ?>
+                    <?php the_posts_navigation(); ?>
 
-                        <?php the_posts_navigation(); ?>
+                <?php else : ?>
+                    <?php get_template_part('template-parts/content/search/content', 'search-null'); ?>
+                <?php endif; ?>
+            </section>
 
-                    <?php else : ?>
-                        <?php get_template_part('template-parts/content', 'search-null'); ?>
-                    <?php endif; ?>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <?php get_sidebar(); ?>
-                </div>
+            <div class="col-12 col-md-4">
+                <?php get_sidebar(); ?>
             </div>
-    </section>
+        </div>
+    </div>
 </main>
 
 <?php get_footer(); ?>
