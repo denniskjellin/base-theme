@@ -11864,6 +11864,7 @@ textarea.form-control-lg {
 --------------------------------------------------------------*/
 /* Colors */
 /* Buttons */
+/* Footer */
 html, body {
   margin: 0;
   padding: 0;
@@ -11880,6 +11881,22 @@ body {
 .entry-title a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 .navbar {
@@ -11924,17 +11941,18 @@ body {
 .footer__links a {
   margin: 0 0.7rem;
   text-decoration: none;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 .footer__links a:hover {
   text-decoration: underline;
+  color: #44d67c;
 }
 .footer__copyright-test {
   margin-bottom: 1.4rem;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
 .footer__social-icons a {
-  color: whitesmoke;
+  color: #f5f5f5;
   text-decoration: none;
   margin: 0 0.5rem;
 }

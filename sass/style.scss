@@ -7,15 +7,6 @@ Text Domain: text-domain
 Tags: Bootstrap 5, Bootstrap Icons
 */
 
-@font-face {
-    font-family: 'Montserrat'; /* Replace with your font's name */
-    src: url('path/to/your/font.woff2') format('woff2'), /* Adjust path and format as needed */
-         url('path/to/your/font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 // Import Bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
@@ -23,8 +14,9 @@ Tags: Bootstrap 5, Bootstrap Icons
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-@import 'abstracts/abstracts';
+@import 'variables/variables';
 @import 'base/base';
-@import 'layout/layout';
 @import 'components/components';
+@import 'layout/layout';
 @import 'pages/pages';
+

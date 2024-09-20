@@ -4,6 +4,7 @@ const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
 const purgecss = require('gulp-purgecss');
+const rename = require('gulp-rename');
 require('dotenv').config();
 
 // Import Bootstrap styles

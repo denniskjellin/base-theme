@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: $footer-bg;
   padding: 2rem 0;
   text-align: center; /* Align all content center */
 
@@ -23,20 +23,21 @@
   &__links a {
     margin: 0 0.7rem;
     text-decoration: none;
-    color: whitesmoke;
+    color: $footer-link;
 
     &:hover {
       text-decoration: underline;
+      color: $footer-link-hover;
     }
   }
 
   &__copyright-test {
     margin-bottom: 1.4rem;
-    color: whitesmoke;
+    color: $footer-text;
   }
 
   &__social-icons a {
-    color: whitesmoke;
+    color: $footer-text;
     text-decoration: none;
     margin: 0 0.5rem;
   }
