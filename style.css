@@ -11866,13 +11866,24 @@ textarea.form-control-lg {
 /* Buttons */
 html, body {
   height: 100%;
+  margin: 0;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* Makes the wrapper full height */
+}
+
+.container {
+  flex: 1; /* Takes up remaining space, pushing footer down */
 }
 
 main {
-  flex: 1;
-  display: flex;
+  padding-top: 1rem;
+}
+
+.sidebar {
   padding-top: 1rem;
 }
 

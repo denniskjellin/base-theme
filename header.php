@@ -9,7 +9,11 @@
     
     <?php wp_head(); ?>
 </head>
-<body class=""<?php body_class(); ?>>
+<body <?php body_class(); ?>>
+  <div class="wrapper">
+
+
+
 
   <!-- main navigation @components/main/main-navbar.php -->
   <?php include 'components/main-navbar.php'; ?>

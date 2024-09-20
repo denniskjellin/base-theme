@@ -22,5 +22,10 @@
     </div>
     </footer>
     <?php wp_footer(); ?>
+    <!-- Other content -->
+
+<?php wp_footer(); ?>
+  </div> <!-- end .wrapper -->
+</body>
 </html>
 

@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<main id="main" class="container main-container" role="main"> 
+<main id="main" class="container main-content" role="main"> 
     <div class="content">
         <?php the_content(); ?>
     </div>
