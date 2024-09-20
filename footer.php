@@ -1,5 +1,5 @@
 
-<footer class="footer">
+<footer class="footer mt-5">
     <div class="footer__content">
         <div class="footer__links">
             <a href="#">Hem</a>
@@ -20,7 +20,7 @@
             </a>
         </div>
     </div>
-    </footer>
+</footer>
     <?php wp_footer(); ?>
     <!-- Other content -->
 

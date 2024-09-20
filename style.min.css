@@ -998,12 +998,20 @@ output {
   flex-grow: 1 !important;
 }
 
+.justify-content-center {
+  justify-content: center !important;
+}
+
 .mt-0 {
   margin-top: 0 !important;
 }
 
 .me-2 {
   margin-right: 0.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
 }
 
 /* rtl:begin:remove */
@@ -1021,12 +1029,15 @@ output {
 /* Colors */
 /* Buttons */
 html, body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-main {
-  flex: 1;
-  display: flex;
+body {
+  min-height: 100svh;
+}
+
+.sidebar {
   padding-top: 1rem;
 }
 
