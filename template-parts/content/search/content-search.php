@@ -8,9 +8,7 @@
     </div><!-- .entry-summary -->
 
     <div class="entry-footer">
-        <?php
-        if ('post' === get_post_type()) :
-            ?>
+        <?php if ('post' === get_post_type()) : ?>
             <div class="entry-meta">
                 <?php
                 printf(
