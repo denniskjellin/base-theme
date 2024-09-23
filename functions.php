@@ -39,3 +39,17 @@ function enqueue_custom_scripts() {
     wp_enqueue_script('wp-base-main-js', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+function enqueue_browser_sync() {
+    // Check if we're in the development environment (adjust as needed)
+    if (defined('WP_ENV') && WP_ENV === 'development') {
+        wp_enqueue_script(
+            'browser-sync',
+            'http://localhost:3000/browser-sync/browser-sync-client.js',
+            array(),
+            null,
+            true // Load in the footer
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_browser_sync');;

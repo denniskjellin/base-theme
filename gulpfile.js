@@ -4,7 +4,6 @@ const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
 const purgecss = require('gulp-purgecss');
-const rename = require('gulp-rename');
 require('dotenv').config();
 
 // Import Bootstrap styles
@@ -15,37 +14,37 @@ const bootstrapJs = 'node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 
 // Compile Bootstrap Sass to CSS
 gulp.task('bootstrap', function () {
-	return gulp.src(bootstrapSass).pipe(sass().on('error', sass.logError)).pipe(concat('style.css')).pipe(gulp.dest('./'));
+	return gulp.src(bootstrapSass)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(concat('style.css'))
+		.pipe(gulp.dest('./'))
+		.pipe(browserSync.stream()); // Inject styles into the browser
 });
 
 // Compile Bootstrap JavaScript
 gulp.task('bootstrap-js', function () {
-	return gulp
-		.src([bootstrapJs, 'js/scripts/*.js'])
+	return gulp.src([bootstrapJs, 'js/scripts/*.js'])
 		.pipe(concat('main.js'))
-		.pipe(
-			terser().on('error', function (e) {
-				console.log(e);
-			})
-		)
+		.pipe(terser().on('error', function (e) {
+			console.log(e);
+		}))
 		.pipe(gulp.dest('./js'));
 });
 
 // Compile custom Sass
 gulp.task('styles', function () {
-	return gulp.src('sass/*.scss').pipe(sass().on('error', sass.logError)).pipe(gulp.dest('./'));
+	return gulp.src('sass/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('./'))
+		.pipe(browserSync.stream()); // Inject styles into the browser
 });
 
 // Purge unused CSS from style.css and create style.min.css
 gulp.task('purgecss', function () {
-	return gulp
-		.src('style.css') // Modify to the path of your main CSS file
-		.pipe(
-			purgecss({
-				content: ['**/*.php'], // Use PHP files as content to scan for used CSS
-				// Add any additional options as needed
-			})
-		)
+	return gulp.src('style.css')
+		.pipe(purgecss({
+			content: ['**/*.php'], // Use PHP files as content to scan for used CSS
+		}))
 		.pipe(concat('style.min.css'))
 		.pipe(gulp.dest('./'));
 });
@@ -67,10 +66,7 @@ gulp.task('watch', () => {
 	gulp.watch('**/*.html').on('change', browserSync.reload);
 	gulp.watch('**/*.css').on('change', browserSync.reload);
 	gulp.watch('**/*.js').on('change', browserSync.reload);
-	// Add more file types as needed
 });
-
-
 
 // Define a default task that includes "serve", "purgecss", and other tasks
 gulp.task('default', gulp.series('bootstrap', 'bootstrap-js', 'styles', 'purgecss', gulp.parallel('server', 'watch')));
