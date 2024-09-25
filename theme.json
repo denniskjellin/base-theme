@@ -1,0 +1,87 @@
+{
+	"version": 1,
+	"settings": {
+		"color": {
+			"custom": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"customGradient": false,
+			"palette": [
+				{
+					"name": "Deep Navy Blue",
+					"slug": "deep-navy-blue",
+					"color": "#0D1B2A"
+				},
+				{
+					"name": "Dark Steel Blue",
+					"slug": "dark-steel-blue",
+					"color": "#1B263B"
+				},
+				{
+					"name": "Muted Slate Blue",
+					"slug": "muted-slate-blue",
+					"color": "#415A77"
+				},
+				{
+					"name": "Light Muted Blue-Gray",
+					"slug": "light-muted-blue-gray",
+					"color": "#778DA9"
+				},
+				{
+					"name": "Soft Light Gray",
+					"slug": "soft-light-gray",
+					"color": "#E0E1DD"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Arial, sans-serif",
+					"slug": "arial",
+					"name": "Arial"
+				}
+			],
+			"fontSizes": [
+				{
+					"name": "Small",
+					"slug": "small",
+					"size": "14px"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"size": "16px"
+				},
+				{
+					"name": "Medium",
+					"slug": "medium",
+					"size": "20px"
+				},
+				{
+					"name": "Large",
+					"slug": "large",
+					"size": "24px"
+				},
+				{
+					"name": "Extra Large",
+					"slug": "extra-large",
+					"size": "32px"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "800px",
+			"wideSize": "1000px"
+		},
+		"button": {
+			"color": {
+				"background": "#0D1B2A",
+				"text": "#ffffff"
+			},
+			"border": {
+				"radius": "8px"
+			}
+		}
+	}
+}
