@@ -4,11 +4,26 @@
     <!-- Main content area -->
     <div class="col-8">
       <main id="main-content">
-        <!-- Your main content here -->
-        <h1>Test</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ab assumenda ullam deserunt. Minus ullam voluptatem delectus aliquid accusantium repellat minima quaerat, quasi repudiandae quod in quos odio ipsa quo?
-        Omnis iste in exercitationem ea, obcaecati vel asperiores? Numquam veritatis repellendus magni odit reprehenderit rem vero eum necessitatibus explicabo, libero vitae sed aliquid, recusandae quo tempore facere quia minima debitis.
-        Fugiat eum necessitatibus temporibus eos ratione eveniet minima culpa? Dicta veniam harum possimus iusto sed porro quidem doloremque repellendus corporis fugiat. Obcaecati incidunt esse magnam? Assumenda fugit aperiam error voluptatibus!</p>
+      
+        <?php
+        // Loop through posts
+        if(have_posts()) :
+          while(have_posts()) : the_post();
+        ?>
+        <article class="post">
+          <h1 class="post__title"><?php the_title(); ?></h1>
+          <div class="post__meta">
+            <span class="post__author">By <?php the_author(); ?></span>
+            <span class="post__date"><?php the_date(); ?></span>
+          </div>
+          <div class="post__content">
+            <?php the_content(); ?>
+          </div>
+        </article>
+        <?php
+          endwhile;
+        endif;
+        ?>
       </main>
     </div>
     
