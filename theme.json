@@ -1,5 +1,6 @@
 {
-	"version": 1,
+	"version": 3,
+	"styles": {},
 	"settings": {
 		"color": {
 			"custom": false,
@@ -71,7 +72,7 @@
 			]
 		},
 		"layout": {
-			"contentSize": "800px",
+			"contentSize": "840px",
 			"wideSize": "1000px"
 		},
 		"button": {

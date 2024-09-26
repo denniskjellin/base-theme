@@ -1,37 +1,37 @@
 {
-  "name": "starter-denkje",
-  "version": "1.0.0",
-  "description": "By Dennis Kjellin",
-  "main": "index.js",
-  "devDependencies": {
-    "browser-sync": "^2.29.3",
-    "dotenv": "^16.4.5",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-purgecss": "^5.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-terser": "^2.1.0",
-    "node-sass": "^9.0.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/denniskjellin/starter-denkje.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/denniskjellin/starter-denkje/issues"
-  },
-  "homepage": "https://github.com/denniskjellin/starter-denkje#readme",
-  "dependencies": {
-    "bootstrap": "^5.3.1",
-    "bootstrap-icons": "^1.11.0",
-    "sass": "^1.77.6"
-  }
+	"name": "starter-denkje",
+	"version": "1.0.0",
+	"description": "By Dennis Kjellin",
+	"main": "index.js",
+	"devDependencies": {
+		"browser-sync": "^3.0.3",
+		"dotenv": "^16.4.5",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^9.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-purgecss": "^6.0.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-terser": "^2.1.0",
+		"sass": "1.77.6"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/denniskjellin/starter-denkje.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/denniskjellin/starter-denkje/issues"
+	},
+	"homepage": "https://github.com/denniskjellin/starter-denkje#readme",
+	"dependencies": {
+		"bootstrap": "^5.3.3",
+		"bootstrap-icons": "^1.11.3",
+		"glob": "^11.0.0"
+	}
 }
